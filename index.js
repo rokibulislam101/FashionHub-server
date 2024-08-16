@@ -5,7 +5,17 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'https://66bf81051f582367ddd6f640--sunny-salamander-fd22d2.netlify.app/',
+    'http://localhost:5173',
+    'http://localhost:5174',
+  ],
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.s6poe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
