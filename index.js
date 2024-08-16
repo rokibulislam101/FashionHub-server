@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 const corsOptions = {
   origin: [
-    'https://66bf81051f582367ddd6f640--sunny-salamander-fd22d2.netlify.app/',
+    'https://sunny-salamander-fd22d2.netlify.app',
     'http://localhost:5173',
     'http://localhost:5174',
   ],
